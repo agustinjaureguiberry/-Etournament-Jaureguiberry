@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+$color-letra: #fff;
+$color-h2: #cafc02;
 
 /*INICIO ESTILO HTML GENERAL*/
 /*INICIO ESTILO HTML GENERAL*/
@@ -27,15 +29,15 @@
 
 /* CLASES PARA QUE LOS LINKS DEL MENU NO CAMBIEN DE COLOR */
 a:link {
-    color: #fff;
+    color: $color-letra;
 }
 a:visited {
-    color: #fff !important;
+    color: $color-letra !important;
 }
 
 /*CLASES PARA TITULOS*/
 h1{
-    color:#fff;
+    color: $color-letra;
     grid-area: tittle;
     text-align: center;
     padding-top: 2%;
@@ -44,7 +46,7 @@ h1{
     margin-bottom: 15px;
 }
 h2 {
-    color: #cafc02;
+    color: $color-h2;
     text-align: center;
     padding: 3% 0% 1.5% 0%;
     width: 100%;
@@ -65,7 +67,7 @@ h5 {
 /*CLASE PARA LA ESTRUCTURA DEL HTML */
 .contentGrid{
     background-image: linear-gradient(to bottom left, #D887D0 15%, #010C34 65%);
-    color: #fff;
+    color: $color-letra;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -77,27 +79,8 @@ h5 {
 }
 
 /*CLASES PARA HEADER, MAIN Y FOOTER (SECCIONES DEL HTML)*/
-header{
-    grid-area: header;
-    color: #fff;
-    height: auto;
-}
 #carouselExampleFade{
     display: none;
-}
-header nav{      
-    background-color: rgb(0,6,29);
-    width:100%;
-    height: 70px;
-    position: fixed;
-}
-nav ul {
-    position: fixed;
-    background-color: rgba(0,6,29, .9);
-    width: 100%;
-    top: -100% ;
-    text-align: center;
-    transition: all, 0.35s;
 }
 
 #check{
@@ -105,8 +88,7 @@ nav ul {
 }
 #check:checked ~ ul{
     left: 0px;
-}
-
+}    
 .barritas{
     display: inline-block;
     height: auto;
@@ -117,13 +99,16 @@ nav ul {
     line-height: 65px;
     cursor: pointer;
 }
-
+header{
+    grid-area: header;
+}
 header nav{      
     background-color: rgb(0, 0, 0);
     width:100%;
     height: 70px;
     top: 0px;
     position: fixed;
+
 }
 nav ul {
     position: fixed;
@@ -131,16 +116,17 @@ nav ul {
     width: 100%;
     top: 70px;
     left: -100%;
+    text-align: center;
     transition: all, 0.35s;
+    li {
+        display: block;
+        border-bottom: rgba(216,135,208, 40%);
+        border-bottom-style:solid;
+        font-size: 20px;
+        padding: 10px;
+    }
 }
 
-nav ul li {
-    display: block;
-    border-bottom: rgba(216,135,208, 40%);
-    border-bottom-style:solid;
-    font-size: 20px;
-    padding: 10px;
-}
 
 main{
     width: 100%;
@@ -160,7 +146,7 @@ p {
 
 footer{
     margin-top: 50px;
-    color: #fff;
+    color: $color-letra;
     background-color: #1d1d1d;
     height: auto;
     width: 100%;
@@ -169,21 +155,22 @@ footer{
     flex-flow: column wrap;
     justify-content: start;
     grid-area: footer;
-}
-footer ul {
-    width: 100%;
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 25px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    ul {
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 25px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        li {
+            display: inline-block;
+            margin: 2%;
+        }
+    }
 }
 
-footer ul li {
-    display: inline-block;
-    margin: 2%;
-}
+
 
 
 /*FINAL ESTILO HTML GENERAL*/
@@ -207,12 +194,11 @@ footer ul li {
     flex-flow: row wrap;
     justify-content: center;
     box-shadow: 2px 10px 0px 0px rgba(0, 0, 0, 0.1), 0 2px 0 0 rgba(0, 0, 0, 0.05);
+    &:hover {
+        box-shadow: 2px 2px 10px 10px rgba(243, 239, 239, 0.63), 10px 10px 10px 10px rgba(233, 223, 223, 0.05);
+        transition: .3s;
+    }
 }
-.juego__disponible:hover {
-    box-shadow: 2px 2px 10px 10px rgba(243, 239, 239, 0.63), 10px 10px 10px 10px rgba(233, 223, 223, 0.05);
-    transition: .3s;
-}
-
 
 .disponible__description {
     width: 80%;
@@ -235,7 +221,7 @@ footer ul li {
     margin-bottom: 3%;
 }
 .btn__mj {
-    color: #fff;
+    color: $color-letra;
     background-color: #00061d;
     border-color: #fff;
     border-radius: 5px;
@@ -247,7 +233,7 @@ footer ul li {
     margin: 1%;
 }
 .btn__ia {
-    color: #fff;
+    color: $color-letra;
     background-color: #4c66bf;
     text-align: center;
     border-radius: 5px;
@@ -259,7 +245,7 @@ footer ul li {
     margin: 1%;
 }
 .btn__vd{ 
-    color: #fff;
+    color: $color-letra;
     display: block;
     font-size: 10px;
     border-radius: 5px;
@@ -272,13 +258,13 @@ footer ul li {
     }
 
 .btn__mj:hover {
-    color: #fff;
+    color: $color-letra;
     background-color: #500766;
     transition: 0.3s;
 }
 
 .btn__ia:hover{
-    color: #fff;
+    color: $color-letra;
     background-color: #500766;
     box-shadow: 5px 10px 0px 0px rgba(0, 0, 0, 0.2), 0 5px 0 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
@@ -304,7 +290,7 @@ footer ul li {
 }
 
 .modos__tittle {
-    color: #cafc02;
+    color: $color-h2;
     text-align: center;
     margin-top: 3%;
     margin-bottom: 2%;
@@ -361,7 +347,7 @@ footer ul li {
 
 .masInfo {
     text-decoration: bold;
-    color: #cafc02;
+    color: $color-h2;
 }
 
 .torneo {
@@ -401,16 +387,16 @@ footer ul li {
 }
 thead tr th {
     text-align: center;
-    color: #cafc02;
+    color: $color-h2;
 }
 
 tbody tr th {
     text-align: center;
-    color:#fff;
+    color:$color-letra;
 }
 tbody tr td {
     text-align: center;
-    color:#fff;
+    color:$color-letra;
 }
 
 
@@ -434,7 +420,7 @@ tbody tr td {
 }
 
 .form-text{
-    color: #cafc028c;
+    color: #cafc0293;
 }
 .termYCond{
     margin-top: 40px;
