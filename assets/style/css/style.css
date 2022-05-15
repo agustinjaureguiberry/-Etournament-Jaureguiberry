@@ -30,29 +30,37 @@ a:visited {
 /*CLASES PARA TITULOS*/
 h1 {
   color: #fff;
-  grid-area: tittle;
   text-align: center;
-  padding-top: 2%;
-  font-size: 20px;
   margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  width: 100%;
+  grid-area: tittle;
+  padding-top: 2%;
+  font-size: 20px; }
 
 h2 {
-  color: #cafc02;
+  color: #fff;
   text-align: center;
-  padding: 3% 0% 1.5% 0%;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 100%;
+  padding: 3% 0% 1.5% 0%;
   font-size: 17px; }
 
 h3 {
-  font-size: 15px;
-  width: 100%;
+  color: #fff;
   text-align: center;
   margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 15px; }
 
 h5 {
-  text-align: center; }
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%; }
 
 /*CLASE PARA LA ESTRUCTURA DEL HTML */
 .contentGrid {
@@ -186,40 +194,40 @@ footer {
   margin-bottom: 3%; }
 
 .btn__mj {
+  border-radius: 5px;
+  box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-size: 10px;
+  width: 40%;
+  padding: 2%;
+  margin: 1%;
   color: #fff;
   background-color: #00061d;
-  border-color: #fff;
-  border-radius: 5px;
-  box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  font-size: 10px;
-  width: 40%;
-  padding: 2%;
-  margin: 1%; }
+  border-color: #fff; }
 
 .btn__ia {
-  color: #fff;
-  background-color: #4c66bf;
-  text-align: center;
   border-radius: 5px;
   box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
-  width: 40%;
+  text-align: center;
   font-size: 10px;
-  vertical-align: middle;
+  width: 40%;
   padding: 2%;
-  margin: 1%; }
+  margin: 1%;
+  color: #fff;
+  background-color: #4c66bf;
+  vertical-align: middle; }
 
 .btn__vd {
-  color: #fff;
-  display: block;
-  font-size: 10px;
   border-radius: 5px;
-  background-color: #4c66bf;
   box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+  font-size: 10px;
   width: 40%;
   padding: 2%;
-  margin: 1%; }
+  margin: 1%;
+  color: #fff;
+  display: block;
+  background-color: #4c66bf; }
 
 .btn__mj:hover {
   color: #fff;
@@ -301,9 +309,9 @@ footer {
   color: #cafc02; }
 
 .torneo {
-  background-color: rgba(0, 48, 66, 0.3);
   border-style: solid;
-  border-color: #cafc0293; }
+  border-color: #cafc0293;
+  background-color: rgba(0, 48, 66, 0.3); }
 
 .copa {
   border-style: solid;

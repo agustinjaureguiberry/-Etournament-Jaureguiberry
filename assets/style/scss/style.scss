@@ -36,32 +36,32 @@ a:visited {
 }
 
 /*CLASES PARA TITULOS*/
-h1{
+@mixin titulos {
     color: $color-letra;
-    grid-area: tittle;
     text-align: center;
-    padding-top: 2%;
-    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
+    width: 100%;
+}
+
+h1{
+    @include titulos;
+    grid-area: tittle;
+    padding-top: 2%;
+    font-size: 20px;
 }
 h2 {
-    color: $color-h2;
-    text-align: center;
+    @include titulos;
     padding: 3% 0% 1.5% 0%;
-    width: 100%;
     font-size: 17px;
 }
 h3 {
+    @include titulos;
     font-size: 15px;
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 h5 {
-    text-align: center;
+    @include titulos;
 }
 
 /*CLASE PARA LA ESTRUCTURA DEL HTML */
@@ -220,42 +220,39 @@ footer{
     justify-content: center;
     margin-bottom: 3%;
 }
+
+@mixin botones {
+    border-radius: 5px;
+    box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    font-size: 10px;
+    width: 40%;
+    padding: 2%;
+    margin: 1%;
+    
+}
+
 .btn__mj {
+    @include botones;
     color: $color-letra;
     background-color: #00061d;
     border-color: #fff;
-    border-radius: 5px;
-    box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    font-size: 10px;
-    width: 40%;
-    padding: 2%;
-    margin: 1%;
+
 }
 .btn__ia {
+    @include botones;
     color: $color-letra;
     background-color: #4c66bf;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
-    width: 40%;
-    font-size: 10px;
     vertical-align: middle;
-    padding: 2% ;
-    margin: 1%;
+
 }
 .btn__vd{ 
+    @include botones;
     color: $color-letra;
     display: block;
-    font-size: 10px;
-    border-radius: 5px;
     background-color: #4c66bf;
-    box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    width: 40%;
-    padding: 2%;
-    margin: 1%;
-    }
+    
+}
 
 .btn__mj:hover {
     color: $color-letra;
@@ -350,15 +347,19 @@ footer{
     color: $color-h2;
 }
 
-.torneo {
-    background-color: rgba(0, 48, 66, 0.3);
+@mixin tipotorn{
     border-style: solid;
     border-color:  #cafc0293 ;
 }
 
+.torneo {
+    @include tipotorn;
+    background-color: rgba(0, 48, 66, 0.3);
+
+}
+
 .copa {
-    border-style: solid;
-    border-color: #cafc0293 ;
+    @include tipotorn;
     background-color: rgba(255, 0, 170, 0.10);
 }
 
@@ -385,18 +386,31 @@ footer{
     width: 100%;
     text-align: center;
 }
-thead tr th {
-    text-align: center;
-    color: $color-h2;
+thead {
+    tr {
+        th {
+            text-align: center;
+            color: $color-h2;
+            }
+        }
 }
 
-tbody tr th {
-    text-align: center;
-    color:$color-letra;
+tbody {
+    tr {
+         th {
+            text-align: center;
+            color:$color-letra;
+            }
+    }
 }
-tbody tr td {
-    text-align: center;
-    color:$color-letra;
+
+tbody {
+    tr{
+        td {
+            text-align: center;
+            color:$color-letra;
+            }
+    }
 }
 
 
@@ -490,12 +504,16 @@ tbody tr td {
      #carouselExampleIndicators{
         display: none;
     }
-    tr th{
+    tr {
+        th{
         font-size: 8px;
     }
-    tr td {
+    }
+    tr {
+        td {
         font-size: 8px;
     }
+}
     .formulario{
         padding: 0% 5% 0% 5%;
     }
@@ -529,12 +547,16 @@ tbody tr td {
     .juego__tipoDesc{
         font-size: 12px;
     }
-    tr th{
+    tr {
+        th{
         font-size: 12px;
     }
-    tr td {
+}
+    tr {
+        td {
         font-size: 12px;
     }
+}
     .btn__ia {
         font-size: 12px;
     }
@@ -582,29 +604,40 @@ tbody tr td {
         width: 100%;
         height: auto;
     }
-    header nav {
+    header {
+        nav {
         position: relative;
         height: auto;
         width: 100%;
         top: auto;
     } 
-    header nav ul{
-        left: 0px;
-        justify-content: center;
-        display: flex;
-        flex-wrap: row, wrap;
-        height: 100%;
-        position: relative;
-        background-color: none;
-        top: auto;
+}
+    header 
+        {
+        nav {
+            ul{
+            left: 0px;
+            justify-content: center;
+            display: flex;
+            flex-wrap: row, wrap;
+            height: 100%;
+            position: relative;
+            background-color: none;
+            top: auto;
+            }
+        }
     }
     
-    nav ul li {
-        border-bottom-style:none;
-        padding: 0 40px;
-        font-size: 15px;
-        height: 100%;
-    }    
+    nav {
+        ul{
+         li {
+            border-bottom-style:none;
+            padding: 0 40px;
+            font-size: 15px;
+            height: 100%;
+        }
+    }
+    }
     ul li:hover{
         background-color: rgba(151, 158, 184, 0.9);
         border-radius: 3px;
@@ -622,10 +655,12 @@ tbody tr td {
     p{
         font-size: 20px;
     }
-    footer ul {
+    footer {
+        ul {
         font-size: 25px;
         margin-bottom: 35px;
     }
+}
     .juego__tipo{
         transition: all, .5s;
         width: 350px;
@@ -645,12 +680,16 @@ tbody tr td {
     .btn__table{
         margin-top: 10px;
     }
-    tr th{
+    tr {
+        th{
         font-size: 15px;
     }
-    tr td {
+}
+    tr {
+        td {
         font-size: 15px;
     }
+}
     .btn__ia {
         font-size: 15px;
     }
@@ -698,29 +737,38 @@ tbody tr td {
         width: 100%;
         height: auto;
     }
-    header nav {
+    header {
+        nav {
         position: relative;
         height: auto;
         width: 100%;
         top: auto;
     } 
-    header nav ul{
-        left: 0px;
-        justify-content: center;
-        display: flex;
-        flex-wrap: row, wrap;
-        height: 100%;
-        position: relative;
-        background-color: none;
-        top: auto;
+}
+    header {
+        nav{
+             ul{
+            left: 0px;
+            justify-content: center;
+            display: flex;
+            flex-wrap: row, wrap;
+            height: 100%;
+            position: relative;
+            background-color: none;
+            top: auto;
+            }
+        }
     }
-    
-    nav ul li {
-    border-bottom-style:none;
-    padding: 20px 40px;
-    font-size: 30px;
-    height: 100%;
-    border-radius: 100px;
+    nav {
+        ul {
+            li {
+                border-bottom-style:none;
+                padding: 20px 40px;
+                font-size: 30px;
+                height: 100%;
+                border-radius: 100px;
+            }
+        }
 }    
     ul li:hover{
         background-color: rgba(151, 158, 184, 0.9);
@@ -750,14 +798,21 @@ tbody tr td {
     footer{
         font-size: 30px;
     }
-    footer ul {
+    footer {
+        ul {
         font-size: 30px;
         margin-bottom: 40px;
+           }
     }
-    footer ul li {
-        padding: 6px;
-        border-radius: 100px;
-    }
+    footer {
+            ul{
+                li {
+                padding: 6px;
+                border-radius: 100px;
+            }
+            }
+    }   
+
     .juego__tipo{
         transition: all, .1s;
         width: 400px;
@@ -788,12 +843,17 @@ tbody tr td {
     .btn__table{
         margin-top: 15px;
     }
-    tr th{
+    tr {
+        th{
         font-size: 18px;
+        }
     }
-    tr td {
-        font-size: 18px;
+    tr{
+        td {
+            font-size: 18px;
+        }
     }
+    
     .datoscont{
         width: 500px;
     }
