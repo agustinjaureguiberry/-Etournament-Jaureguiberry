@@ -1,0 +1,649 @@
+@charset "UTF-8";
+* {
+  padding: 0%;
+  margin: 0%;
+  text-decoration: none !important;
+  list-style: none;
+  box-sizing: border-box; }
+
+/*INICIO ESTILO HTML GENERAL*/
+/*INICIO ESTILO HTML GENERAL*/
+/*INICIO ESTILO HTML GENERAL*/
+/*INICIO ESTILO HTML GENERAL*/
+/* CLASES CON FUENTES UTILIZADAS */
+.fuenteKanit {
+  font-family: "kanit";
+  src: url(./../Fonts/Kanit/Kanit-Regular.ttf); }
+
+.fuenteRajdhani {
+  font-family: "Rajdhani";
+  src: url(./../Fonts/Rajdhani/Rajdhani-Medium.ttf);
+  font-style: normal; }
+
+/* CLASES PARA QUE LOS LINKS DEL MENU NO CAMBIEN DE COLOR */
+a:link {
+  color: #fff; }
+
+a:visited {
+  color: #fff !important; }
+
+/*CLASES PARA TITULOS*/
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  grid-area: tittle;
+  padding-top: 2%;
+  font-size: 20px; }
+
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 3% 0% 1.5% 0%;
+  font-size: 17px; }
+
+h3 {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 15px; }
+
+h5 {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%; }
+
+/*CLASE PARA LA ESTRUCTURA DEL HTML */
+.contentGrid {
+  background-image: linear-gradient(to bottom left, #D887D0 15%, #010C34 65%);
+  color: #fff;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header"  "tittle tittle" "conten conten" "footer footer"; }
+
+/*CLASES PARA HEADER, MAIN Y FOOTER (SECCIONES DEL HTML)*/
+#carouselExampleFade {
+  display: none; }
+
+#check {
+  display: none; }
+
+#check:checked ~ ul {
+  left: 0px; }
+
+.barritas {
+  display: inline-block;
+  height: auto;
+  line-height: 10px;
+  font-size: 30px;
+  float: left;
+  padding: 2px 30px;
+  line-height: 65px;
+  cursor: pointer; }
+
+header {
+  grid-area: header; }
+
+header nav {
+  background-color: black;
+  width: 100%;
+  height: 70px;
+  top: 0px;
+  position: fixed; }
+
+nav ul {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  top: 70px;
+  left: -100%;
+  text-align: center;
+  transition: all, 0.35s; }
+  nav ul li {
+    display: block;
+    border-bottom: #d887d0;
+    border-bottom-style: solid;
+    font-size: 20px;
+    padding: 10px; }
+
+main {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  grid-area: conten; }
+
+p {
+  padding: 4px;
+  font-size: 10px;
+  text-align: center;
+  overflow: auto; }
+
+footer {
+  margin-top: 50px;
+  color: #fff;
+  background-color: #1d1d1d;
+  height: auto;
+  width: 100%;
+  padding-top: 1%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  grid-area: footer; }
+  footer ul {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    footer ul li {
+      display: inline-block;
+      margin: 2%; }
+
+/*FINAL ESTILO HTML GENERAL*/
+/*FINAL ESTILO HTML GENERAL*/
+/*FINAL ESTILO HTML GENERAL*/
+/*FINAL ESTILO HTML GENERAL*/
+/*INICIO ESTILO HTML INDEX*/
+/*INICIO ESTILO HTML INDEX*/
+/*INICIO ESTILO HTML INDEX*/
+/*INICIO ESTILO HTML INDEX*/
+/*(#D887D0, #010C34 )*/
+/*Clases de estilos para la caja de cada juego individual */
+.juego__disponible {
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 4%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  box-shadow: 2px 10px 0px 0px rgba(0, 0, 0, 0.1), 0 2px 0 0 rgba(0, 0, 0, 0.05); }
+  .juego__disponible:hover {
+    box-shadow: 2px 2px 10px 10px rgba(243, 239, 239, 0.63), 10px 10px 10px 10px rgba(233, 223, 223, 0.05);
+    transition: .3s; }
+
+.disponible__description {
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 2%; }
+
+.disponible__video {
+  height: 420px;
+  width: 700px; }
+
+.disponible__btn {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 3%; }
+
+.btn__mj {
+  border-radius: 5px;
+  box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-size: 10px;
+  width: 40%;
+  padding: 2%;
+  margin: 1%;
+  color: #fff;
+  background-color: #00061d;
+  border-color: #fff; }
+
+.btn__ia {
+  border-radius: 5px;
+  box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-size: 10px;
+  width: 40%;
+  padding: 2%;
+  margin: 1%;
+  color: #fff;
+  background-color: #4c66bf;
+  vertical-align: middle; }
+
+.btn__vd {
+  border-radius: 5px;
+  box-shadow: 2px 5px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 0 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-size: 10px;
+  width: 40%;
+  padding: 2%;
+  margin: 1%;
+  color: #fff;
+  display: block;
+  background-color: #4c66bf; }
+
+.btn__mj:hover {
+  color: #fff;
+  background-color: #500766;
+  transition: 0.3s; }
+
+.btn__ia:hover {
+  color: #fff;
+  background-color: #500766;
+  box-shadow: 5px 10px 0px 0px rgba(0, 0, 0, 0.2), 0 5px 0 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s; }
+
+/*FINAL ESTILO HTML INDEX*/
+/*FINAL ESTILO HTML INDEX*/
+/*FINAL ESTILO HTML INDEX*/
+/*FINAL ESTILO HTML INDEX*/
+/*INICIO ESTILO HTML MODOS*/
+/*INICIO ESTILO HTML MODOS*/
+/*INICIO ESTILO HTML MODOS*/
+/*INICIO ESTILO HTML MODOS*/
+.modos {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  padding-bottom: 5%;
+  border-top: solid #fff; }
+
+.modos__tittle {
+  color: #cafc02;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 2%; }
+
+.modos__description {
+  text-align: center; }
+
+.modos__juego {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center; }
+
+.juego__tipo {
+  width: 90%;
+  height: 300px;
+  border: 5px;
+  border-radius: 5%;
+  margin: 1%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly; }
+
+.juego__tipoName {
+  text-align: center;
+  width: 100%;
+  height: 10%; }
+
+.juego__tipoDesc {
+  font-size: 15px;
+  text-align: center;
+  width: 90%;
+  margin-left: 5%;
+  height: 30%;
+  margin-bottom: 30%; }
+
+.juego__tipoBtn {
+  font-size: 10px;
+  background-color: #4c66bf;
+  text-align: center;
+  height: 10%;
+  width: 80%;
+  padding: 2%;
+  margin-left: 10%; }
+
+.masInfo {
+  text-decoration: bold;
+  color: #cafc02; }
+
+.torneo {
+  border-style: solid;
+  border-color: #cafc0293;
+  background-color: rgba(0, 48, 66, 0.3); }
+
+.copa {
+  border-style: solid;
+  border-color: #cafc0293;
+  background-color: rgba(255, 0, 170, 0.1); }
+
+/*FINAL ESTILO HTML MODOS*/
+/*FINAL ESTILO HTML MODOS*/
+/*FINAL ESTILO HTML MODOS*/
+/*FINAL ESTILO HTML MODOS*/
+/*INICIO ESTILO HTML FECHAS*/
+/*INICIO ESTILO HTML FECHAS*/
+/*INICIO ESTILO HTML FECHAS*/
+/*INICIO ESTILO HTML FECHAS*/
+.fechas {
+  width: 95%;
+  margin-left: 2.5%; }
+
+.table {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  --bs-table-hover-color: #cafc02 !important;
+  height: auto; }
+
+.btn__table {
+  width: 100%;
+  text-align: center; }
+
+thead tr th {
+  text-align: center;
+  color: #cafc02; }
+
+tbody tr th {
+  text-align: center;
+  color: #fff; }
+
+tbody tr td {
+  text-align: center;
+  color: #fff; }
+
+/*FINAL ESTILO HTML FECHAS*/
+/*FINAL ESTILO HTML FECHAS*/
+/*FINAL ESTILO HTML FECHAS*/
+/*FINAL ESTILO HTML FECHAS*/
+/*INICIO ESTILO HTML INSCRIPCIÓN*/
+/*INICIO ESTILO HTML INSCRIPCIÓN*/
+/*INICIO ESTILO HTML INSCRIPCIÓN*/
+/*INICIO ESTILO HTML INSCRIPCIÓN*/
+.formulario {
+  height: auto;
+  width: 95%;
+  margin: 2%;
+  padding: 0% 10% 0% 10%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px; }
+
+.form-text {
+  color: #cafc0293; }
+
+.termYCond {
+  margin-top: 40px;
+  margin-bottom: 10px; }
+
+/*FINAL ESTILO HTML INSCRIPCION*/
+/*FINAL ESTILO HTML INSCRIPCION*/
+/*FINAL ESTILO HTML INSCRIPCION*/
+/*FINAL ESTILO HTML INSCRIPCION*/
+/*INICIO ESTILO HTML CONTACTO*/
+/*INICIO ESTILO HTML CONTACTO*/
+/*INICIO ESTILO HTML CONTACTO*/
+/*INICIO ESTILO HTML CONTACTO*/
+.contacto {
+  width: 100%;
+  display: flex;
+  flex: column wrap;
+  justify-content: center; }
+
+.datoscont {
+  padding: 3% 1% 1% 0;
+  background-color: #020202;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.formcont {
+  height: 500px;
+  width: 200px;
+  padding: 5% 10% 0% 10%;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.pContact {
+  text-align: left;
+  padding-left: 10%; }
+
+.fa-solid {
+  margin-right: 5%; }
+
+.fa-brands {
+  margin-right: 5%; }
+
+/*MEDIAS QUERIS FULL RESPONSIVE*/
+/*RESPONSIVE CELULAR */
+@media screen and (min-width: 0px) and (max-width: 380px) {
+  .disponible__video {
+    display: none; }
+  main {
+    margin-top: 70px; }
+  .btn__ia {
+    font-size: 10px;
+    padding: 4%; }
+  #carouselExampleIndicators {
+    display: none; }
+  tr th {
+    font-size: 8px; }
+  tr td {
+    font-size: 8px; }
+  .formulario {
+    padding: 0% 5% 0% 5%; } }
+
+/*RESPONSIVE TABLETA */
+@media screen and (min-width: 381px) and (max-width: 740px) {
+  main {
+    margin-top: 70px; }
+  .disponible__video {
+    width: 420px;
+    height: 240px; }
+  .btn__vd {
+    display: none; }
+  .btn__mj {
+    font-size: 12px; }
+  .btn__ia {
+    font-size: 12px; }
+  #carouselExampleIndicators {
+    display: none; }
+  .juego__tipo {
+    width: 200px; }
+  .juego__tipoDesc {
+    font-size: 12px; }
+  tr th {
+    font-size: 12px; }
+  tr td {
+    font-size: 12px; }
+  .btn__ia {
+    font-size: 12px; }
+  .formulario {
+    padding: 0% 5% 0% 5%; }
+  .datoscont {
+    width: 300px; }
+  .formcont {
+    height: 500px;
+    width: 300px; } }
+
+/*RESPONSIVE PC PANTALLA MEDIANA */
+@media screen and (min-width: 741px) and (max-width: 1000px) {
+  .disponible__video {
+    width: 600px;
+    height: 350px; }
+  .btn__mj {
+    box-shadow: 5px 10px 0px 0px rgba(0, 0, 0, 0.2), 0 5px 0 0 rgba(0, 0, 0, 0.19); }
+  .btn__ia {
+    box-shadow: 5px 10px 0px 0px rgba(0, 0, 0, 0.2), 0 5px 0 0 rgba(0, 0, 0, 0.19); }
+  .btn__vd {
+    display: none; }
+  .barritas {
+    display: none; }
+  header {
+    height: auto;
+    top: 0px; }
+  #carouselExampleFade {
+    display: block;
+    width: 100%;
+    height: auto; }
+  header nav {
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: auto; }
+  header nav ul {
+    left: 0px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: row, wrap;
+    height: 100%;
+    position: relative;
+    background-color: none;
+    top: auto; }
+  nav ul li {
+    border-bottom-style: none;
+    padding: 0 40px;
+    font-size: 15px;
+    height: 100%; }
+  ul li:hover {
+    background-color: rgba(151, 158, 184, 0.9);
+    border-radius: 3px;
+    transition: all, 0.35s; }
+  h1 {
+    font-size: 25px; }
+  h2 {
+    font-size: 20px; }
+  h3 {
+    font-size: 18px; }
+  p {
+    font-size: 20px; }
+  footer ul {
+    font-size: 25px;
+    margin-bottom: 35px; }
+  .juego__tipo {
+    transition: all, .5s;
+    width: 350px;
+    height: 400px; }
+  .juego__tipo:hover {
+    width: 22rem;
+    height: 32rem; }
+  .juego__tipoDesc {
+    font-size: 18px;
+    width: 85%;
+    height: 40%;
+    margin-bottom: 0;
+    overflow: auto; }
+  .btn__table {
+    margin-top: 10px; }
+  tr th {
+    font-size: 15px; }
+  tr td {
+    font-size: 15px; }
+  .btn__ia {
+    font-size: 15px; }
+  .datoscont {
+    width: 400px; }
+  .formcont {
+    height: 600px;
+    width: 400px; } }
+
+/*RESPONSIVE PC PANTALLA GRANDE */
+@media screen and (min-width: 1001px) {
+  .disponible__video {
+    width: 800px;
+    height: 480px; }
+  .btn__mj {
+    font-size: 17px;
+    box-shadow: 5px 10px 0px 0px rgba(0, 0, 0, 0.2), 0 5px 0 0 rgba(0, 0, 0, 0.19); }
+  .btn__ia {
+    width: auto;
+    font-size: 25px;
+    padding: 5px 30px 5px 30px;
+    box-shadow: 5px 10px 0px 0px rgba(0, 0, 0, 0.2), 0 5px 0 0 rgba(0, 0, 0, 0.19); }
+  .btn__vd {
+    display: none; }
+  .barritas {
+    display: none; }
+  header {
+    height: auto;
+    top: 0px; }
+  #carouselExampleFade {
+    display: block;
+    width: 100%;
+    height: auto; }
+  header nav {
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: auto; }
+  header nav ul {
+    left: 0px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: row, wrap;
+    height: 100%;
+    position: relative;
+    background-color: none;
+    top: auto; }
+  nav ul li {
+    border-bottom-style: none;
+    padding: 20px 40px;
+    font-size: 30px;
+    height: 100%;
+    border-radius: 100px; }
+  ul li:hover {
+    background-color: rgba(151, 158, 184, 0.9);
+    border-radius: 3px;
+    transition: all, 0.35s; }
+  .disponible__description {
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 2%; }
+  h1 {
+    font-size: 35px; }
+  p {
+    font-size: 25px; }
+  h2 {
+    font-size: 30px; }
+  h3 {
+    font-size: 22px; }
+  footer {
+    font-size: 30px; }
+  footer ul {
+    font-size: 30px;
+    margin-bottom: 40px; }
+  footer ul li {
+    padding: 6px;
+    border-radius: 100px; }
+  .juego__tipo {
+    transition: all, .1s;
+    width: 400px;
+    height: 500px; }
+  .juego__tipo:hover {
+    width: 420px;
+    height: 520px;
+    box-shadow: 2px 2px 10px 10px rgba(243, 239, 239, 0.63), 10px 10px 10px 10px rgba(233, 223, 223, 0.05);
+    transition: .3s; }
+  .juego__tipoDesc {
+    font-size: 20px;
+    width: 90%;
+    height: 40%;
+    margin-bottom: 0;
+    overflow: auto; }
+  .juego__tipoBtn {
+    font-size: 20px;
+    border-radius: 5px; }
+  .juego__tipoBtn:hover {
+    background-color: #500766;
+    box-shadow: 5px 10px 0px 0px rgba(0, 0, 0, 0.2), 0 5px 0 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s; }
+  .btn__table {
+    margin-top: 15px; }
+  tr th {
+    font-size: 18px; }
+  tr td {
+    font-size: 18px; }
+  .datoscont {
+    width: 500px; }
+  .formcont {
+    height: 600px;
+    width: 500px; } }
